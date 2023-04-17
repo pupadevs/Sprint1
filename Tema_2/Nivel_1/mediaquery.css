@@ -8,3 +8,23 @@
         background-color: lightblue;
       }
 }
+/*For mobiles*/
+@media screen  and (min-width: 320px) and (max-width: 480px){
+    body {
+        background-color: turquoise;
+      }
+    .menu{
+        background: #C147E9;
+        display: flex;
+       flex-direction: column;
+        
+     
+    }.seccion{
+        background: greenyellow;
+    }
+     .logo, .social, .nav{
+        
+        width: 90%;
+    }
+   
+}
