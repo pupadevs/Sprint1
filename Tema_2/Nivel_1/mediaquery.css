@@ -1,0 +1,10 @@
+/*For Tablets*/
+@@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .seccion {
+        background: yellow;
+        display: flex;
+        flex-direction: column;
+      }  body {
+        background-color: lightblue;
+      }
+}
