@@ -7,7 +7,7 @@ abstract class Shape{
        $this->altura = $altura;
        $this->achura  = $anchura;
 
-    }
+    }   
 
     abstract function area();
 }
