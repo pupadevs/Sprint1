@@ -3,7 +3,16 @@ echo "<left><h2><b>" . "Ejercicio 1" .  "</b></h2></left>";
 
 //Escribe un programa en PHP para convertir una cadena en un array (recortando cada carácter y eliminando las líneas vacías).
 $hola = "Hola mundo";
-echo $hola;
-$arrayCaracter = str_split($hola); //str split conviert una cadena en un array de caracter
-print_r($arrayCaracter);
+$num = 5;
+
+print_r (convertiraArray($hola));
+function convertiraArray($cadena) {
+    if (is_string($cadena)) {
+        $array = str_split($cadena);
+        $array = array_filter($array, function($valor) { //Funcion anonima para devolver lo no sea un espacio
+            return $valor !== " ";
+        });
+        return $array;
+    }
+}
 ?>
