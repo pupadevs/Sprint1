@@ -8,7 +8,7 @@ $num = 5;
 print_r (convertiraArray($hola));
 function convertiraArray($cadena) {
     if (is_string($cadena)) {
-        $array = str_split($cadena);
+        $array = str_split($cadena); //convierte cadena en array de caracteres
         $array = array_filter($array, function($valor) { //Funcion anonima para devolver lo no sea un espacio
             return $valor !== " ";
         });
