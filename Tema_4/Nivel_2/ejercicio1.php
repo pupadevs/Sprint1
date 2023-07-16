@@ -1,14 +1,31 @@
 <?php
-include_once("Pokerdice.php");
+include_once("Poketiradas.php");
 $juego = new PokerDice();
 
-$v = 0;
+
 $juego->tirar();
-$valor = $juego->tirar();
-for ($i=0; $i <6 ; $i++) { 
-    
-    $juego->tirar();
+echo "La ultima tirada fue:". $juego->ultimaTirada() . PHP_EOL;
+$juego->tirar();
+echo "La ultima tirada fue:". $juego->ultimaTirada() . PHP_EOL;
+$juego->tirar();
+echo "La ultima tirada fue:". $juego->ultimaTirada() . PHP_EOL;
+
+//$valor = $juego->tirar();
+
+echo "Numero total de tiradas " . $juego->getTotalThrows(). PHP_EOL;
+
+//$juego->shapeName($valor);
+function realizarTiradas() {
+    $tiradas = [];
+    for ($i = 0; $i < 5; $i++) {
+        $tirada = new PokerDice();
+        $tirada->tirar();
+        $tiradas[] = $tirada->ultimaTirada();
+    }
+    return $tiradas;
 }
-$juego->tirar();
-$juego->shapeName($valor);
-echo "<br>Han sido un toal de: ".$juego->getTotalThrows() ." tiradas";
+
+// Ejemplo de uso
+$resultados = realizarTiradas();
+echo "Resultados de las 5 tiradas: " . implode(", ", $resultados);
+
