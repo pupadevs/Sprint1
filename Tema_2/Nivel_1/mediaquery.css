@@ -1,5 +1,5 @@
 /*For Tablets*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@@media screen and (min-width: 768px) and (max-width: 1024px) {
     .seccion {
         background: yellow;
         display: flex;
@@ -7,15 +7,6 @@
       }  body {
         background-color: lightblue;
       }
-}@media screen and (min-width: 481px) and (max-width: 768px){
-  .seccion {
-    background: yellow;
-    display: flex;
-    flex-direction: column;
-  }  body {
-    background-color: lightblue;
-  }
-
 }
 /*For mobiles*/
 @media screen  and (min-width: 320px) and (max-width: 480px){
@@ -30,8 +21,6 @@
      
     }.seccion{
         background: greenyellow;
-        display: flex;
-    flex-direction: column;
     }
      .logo, .social, .nav{
         
